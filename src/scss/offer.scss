@@ -1,0 +1,64 @@
+.offer {
+  width: 320px;
+  background-color: #f8f8f8;
+}
+
+.offer__text {
+  font-family: "TTLakes";
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+  color: #1b1c21;
+  padding: 16px;
+}
+
+.offer a {
+  position: relative;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0px 16px 24px 16px;
+}
+
+.offer a span {
+  font-family: "TTLakes";
+  font-size: 16px;
+  line-height: 24px;
+  color: #1b1c21;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+.offer a::after {
+  position: absolute;
+  content: "";
+  width: 15px;
+  height: 15px;
+  top: 31px;
+  right: 175px;
+  background-image: url("../img/icons/arrow.svg");
+  background-repeat: no-repeat;
+}
+
+@media (min-width: 768px) {
+  .offer {
+    width: 100%;
+  }
+  .offer__text {
+    padding: 24px 0px 16px 24px;
+  }
+
+  .offer a {
+    padding: 0px 24px 24px 24px;
+  }
+
+  .offer a::after {
+    top: 7px;
+    right: 0px;
+  }
+}
+
+@media (min-width: 1120px) {
+  .offer__text {
+    width: 50%;
+  }
+}

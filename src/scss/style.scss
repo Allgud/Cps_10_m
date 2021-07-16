@@ -1,0 +1,96 @@
+@import "./sidebar.scss";
+@import "./service__page.scss";
+@import "./brands.scss";
+@import "./types.scss";
+@import "./price.scss";
+@import "./offer.scss";
+@import "./footer.scss";
+@import "./modal.scss";
+
+@font-face {
+  font-family: "TTLakes";
+  src: url("../fonts/TTLakes-Regular.ttf");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "TTLakes-Bold";
+  src: url("../fonts/TTLakes-Bold.ttf");
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: "TTLakes-Medium";
+  src: url("../fonts/TTLakes-Medium.ttf");
+  font-weight: 700;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  background-color: #f8f8f8;
+}
+
+aside {
+  width: 320px;
+  transform: translateX(-320px);
+  display: none;
+}
+
+.menu--open {
+  display: block;
+  transform: translateX(0);
+  z-index: 3;
+}
+
+main {
+  width: 100%;
+  margin-left: 1px;
+}
+
+.main--swing {
+  transform: translateX(-320px);
+  opacity: 0.5;
+}
+
+/*GLOBAL*/
+
+.button {
+  width: 40px;
+  height: 40px;
+  background-color: #ff3e79;
+  border-radius: 20px;
+  outline: none;
+  border-style: none;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  aside {
+    transform: translateX(0);
+    z-index: 10;
+  }
+
+  .dropdown {
+    padding-bottom: 48px;
+  }
+}
+
+@media (min-width: 1120px) {
+  aside {
+    position: relative;
+    display: block !important;
+    transform: translateX(0) !important;
+  }
+
+  .dropdown {
+    padding-bottom: 65px;
+  }
+}

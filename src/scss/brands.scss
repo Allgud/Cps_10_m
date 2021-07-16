@@ -1,0 +1,162 @@
+.brands {
+  width: 320px;
+}
+
+.brands ul {
+  list-style: none;
+}
+
+.brands__header {
+  background-color: #ffffff;
+  max-width: 100%;
+}
+
+h2 {
+  font-family: "TTLakes";
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  letter-spacing: -0.2px;
+  color: #7e7e82;
+  text-transform: uppercase;
+  padding: 16px;
+}
+
+.brands__container {
+  background-color: #f8f8f8;
+  padding: 16px 0px 16px 16px;
+}
+
+.brands__wrapper {
+  display: flex;
+  overflow: scroll;
+}
+
+.brands__slide {
+  border: 1px solid lightgrey;
+  height: 72px;
+  border-radius: 7px;
+  padding: 0px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  margin-right: 16px;
+  margin-bottom: 16px;
+  flex: 0 0 65vw;
+}
+
+.slide__link a {
+  display: block;
+  background: url("../img/icons/arrow.svg") 50% 50% no-repeat;
+  width: 38px;
+  height: 38px;
+  border: 2px solid #ff3e79;
+  border-radius: 50%;
+  background-color: inherit;
+}
+
+.swiper-pagination {
+  position: relative;
+  top: 4px;
+}
+
+.swiper-pagination-bullet {
+  display: inline-block;
+  margin: 0px 6px;
+  width: 12px;
+  height: 12px;
+  background-color: #b5b6bc;
+}
+
+.invisible {
+  display: none;
+}
+
+.dropdown {
+  padding-left: 72px;
+  padding-bottom: 24px;
+  background-color: #f8f8f8;
+  display: none;
+}
+
+.dropdown__button {
+  outline: none;
+  border: none;
+  background-color: inherit;
+}
+
+.dropdown__span {
+  display: inline-block;
+  margin-left: 16px;
+  font-family: "TTLakes";
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+  letter-spacing: -0.2px;
+  color: #1b1c21;
+  cursor: pointer;
+}
+
+.img--rotate {
+  transform: rotate(180deg);
+}
+
+@media (min-width: 768px) {
+  .brands {
+    width: 768px;
+  }
+  h2 {
+    padding: 16px 24px;
+  }
+
+  .brands__container {
+    padding-top: 24px;
+    padding-left: 24px;
+    padding-bottom: 0;
+  }
+
+  .brands__wrapper {
+    flex-wrap: wrap;
+  }
+
+  .brands__slide {
+    margin-right: 24px;
+    flex: 0 0 25vw;
+  }
+
+  .brands__slide:nth-child(4n) {
+    display: none;
+  }
+
+  .brands__pagination {
+    display: none;
+  }
+
+  .dropdown {
+    display: block;
+  }
+}
+
+@media (min-width: 1120px) {
+  .brands {
+    width: 100%;
+  }
+  h2 {
+    padding: 16px 32px;
+  }
+
+  .brands__container {
+    padding-top: 24px;
+    padding-left: 32px;
+  }
+
+  .brands__slide {
+    margin-right: 24px;
+    flex: 0 0 14.2vw;
+  }
+
+  .brands__slide:nth-child(4n) {
+    display: flex;
+  }
+}
