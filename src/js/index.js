@@ -1,5 +1,7 @@
 import '../scss/style.scss'
 
+import './slider'
+
 /*Modal*/
 
 let buttonCall = document.querySelectorAll('.btn--call')
@@ -17,7 +19,7 @@ let main = document.getElementsByTagName('main')
 let currentWidth = window.screen.width;
 
 window.addEventListener('resize', () => {
-    currentWidth = window.screen.width
+    currentWidth = window.screen.width;
 })
 
 buttonCall.forEach( item => {
@@ -58,10 +60,6 @@ menuClose[0].addEventListener('click', () => {
   }
 })
 
-
-
-
-
 /*Dropdown */
 let brandsDropdown = document.querySelector('.drop--brands')
 let typesDropdown = document.querySelector('.drop--types')
@@ -94,6 +92,12 @@ textDropdown[0].addEventListener('click', () => {
     let img = dropSection.getElementsByTagName('img')
     img[0].classList.toggle('img--rotate')
 })
+
+
+
+
+
+
 
 
 

@@ -51,5 +51,8 @@
   "bugs": {
     "url": "https://github.com/Allgud/Cps_10/issues"
   },
-  "homepage": "https://github.com/Allgud/Cps_10#readme"
+  "homepage": "https://github.com/Allgud/Cps_10#readme",
+  "dependencies": {
+    "swiper": "^6.7.5"
+  }
 }

@@ -31,7 +31,8 @@ h2 {
 .types__wrapper {
   list-style: none;
   display: flex;
-  overflow: scroll;
+
+  min-width: 0;
 }
 
 .types__slide {
@@ -71,19 +72,6 @@ h2 {
 
 .type-link {
   transform: translateY(42px);
-}
-
-.types__pagination {
-  position: relative;
-  top: 4px;
-}
-
-.types__pagination-bullet {
-  display: inline-block;
-  margin: 0px 6px;
-  width: 12px;
-  height: 12px;
-  background-color: #b5b6bc;
 }
 
 .dropdown__button {
