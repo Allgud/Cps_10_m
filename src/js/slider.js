@@ -8,27 +8,41 @@ const slider = () => {
   sliders.forEach( item => {
     if(window.innerWidth < 768 && item.dataset.mobile === 'false'){
       SwiperCore.use([Navigation, Pagination])
-      let mobileSlider = new Swiper(item, {
+      new Swiper(item, {
       slidesPerView: 1.19,
       slideClass: 'slide',
       pagination: {
         el: '.swiper-pagination',
         clickable: true,
       }
+
     })
     item.dataset.mobile = 'true'
    }
-   window.addEventListener('resize', () => {
-    if(innerWidth < 768){
-      slider()
-    }else {
-      item.dataset.mobile = 'false'
-    }
-    })
   })
 }
 
+
+
+window.addEventListener('resize', () => {
+  let screenWidth = window.screen.width
+  console.log(screenWidth);
+  if(screenWidth < 768){
+    slider()
+  }else if(screenWidth >= 768){
+    sliders.forEach( item => {
+      if(item.dataset.mobile === 'true'){
+        item.dataset.mobile = 'false'
+        location.reload()
+      }
+    })
+  }
+})
+
 slider()
+
+
+
 
 
 

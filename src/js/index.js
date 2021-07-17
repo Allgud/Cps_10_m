@@ -42,7 +42,8 @@ buttonMessage.forEach( item => {
 
 modals.forEach( m => {
   let modalClose = m.querySelector('.modal__container').childNodes[1].children;
-  let cont = m.querySelector('.modal__container')
+  let cont = m.querySelector('modal__container')
+
   m.addEventListener('click', (e) => {
     if(e.target !== cont || e.target === modalClose){
       m.classList.remove('modal--open')
