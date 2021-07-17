@@ -16,11 +16,17 @@ let modals = document.querySelectorAll('.modal')
 let menuButton = document.querySelector('.btn--burger')
 let menu = document.getElementsByTagName('aside')
 let main = document.getElementsByTagName('main')
-let currentWidth = window.screen.width;
+
+
 
 window.addEventListener('resize', () => {
-    currentWidth = window.screen.width;
+  if(window.screen.width >= 1120){
+    menu[0].classList.remove('menu--open')
+    main[0].classList.remove('main--swing')
+  }
 })
+
+
 
 buttonCall.forEach( item => {
     item.addEventListener('click', () => {
@@ -54,7 +60,7 @@ menuButton.addEventListener('click', () => {
 })
 
 menuClose[0].addEventListener('click', () => {
-  if(currentWidth <= 1120){
+  if(window.screen.width <= 1120){
     menu[0].classList.remove('menu--open')
     main[0].classList.remove('main--swing')
   }
