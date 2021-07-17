@@ -16,6 +16,7 @@ let modals = document.querySelectorAll('.modal')
 let menuButton = document.querySelector('.btn--burger')
 let menu = document.getElementsByTagName('aside')
 let main = document.getElementsByTagName('main')
+let body = document.getElementsByTagName('body')
 
 
 
@@ -31,22 +32,29 @@ window.addEventListener('resize', () => {
 buttonCall.forEach( item => {
     item.addEventListener('click', () => {
         modalCall.classList.add('modal--open')
+        window.scrollTo(0,0)
+        body[0].classList.add('scroll--lock')
     })
 })
 
 buttonMessage.forEach( item => {
     item.addEventListener('click', () => {
         modalMessage.classList.add('modal--open')
+        window.scrollTo(0,0)
+        body[0].classList.add('scroll--lock')
     })
 })
 
 modals.forEach( m => {
   let modalClose = m.querySelector('.modal__container').childNodes[1].children;
-  let cont = m.querySelector('modal__container')
+  let cont = m.querySelector('.modal__container')
 
   m.addEventListener('click', (e) => {
-    if(e.target !== cont || e.target === modalClose){
+    console.log(e.target);
+    console.log(cont.children)
+    if(e.target != cont || e.target === modalClose){
       m.classList.remove('modal--open')
+      body[0].classList.remove('scroll--lock')
     }
   })
 })

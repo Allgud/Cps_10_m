@@ -35,6 +35,10 @@ body {
   background-color: #f8f8f8;
 }
 
+.scroll--lock {
+  overflow: hidden;
+}
+
 aside {
   width: 320px;
   transform: translateX(-320px);
