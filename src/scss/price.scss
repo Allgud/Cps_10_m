@@ -6,7 +6,7 @@
   padding: 16px 0px 16px 16px;
   background-color: #f8f8f8;
   display: flex;
-  overflow: scroll;
+  min-width: 0;
 }
 .price__wrapper > div {
   margin-right: 16px;

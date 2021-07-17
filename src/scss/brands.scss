@@ -29,7 +29,7 @@ h2 {
 
 .brands__wrapper {
   display: flex;
-  overflow: scroll;
+  min-width: 0;
 }
 
 .brands__slide {
