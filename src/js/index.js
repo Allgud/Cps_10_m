@@ -54,7 +54,7 @@ menuButton.addEventListener('click', () => {
 })
 
 menuClose[0].addEventListener('click', () => {
-  if(currentWidth >= 1120){
+  if(currentWidth <= 1120){
     menu[0].classList.remove('menu--open')
     main[0].classList.remove('main--swing')
   }
