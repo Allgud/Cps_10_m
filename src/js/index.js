@@ -47,15 +47,16 @@ buttonMessage.forEach( item => {
 
 modals.forEach( m => {
   let modalClose = m.querySelector('.modal__container').childNodes[1].children;
-  let cont = m.querySelector('.modal__container')
-
   m.addEventListener('click', (e) => {
-    console.log(e.target);
-    console.log(cont.children)
-    if(e.target != cont || e.target === modalClose){
+    let target = e.target
+    if(target.classList.contains('modal')){
       m.classList.remove('modal--open')
       body[0].classList.remove('scroll--lock')
     }
+  })
+  modalClose[0].addEventListener('click', () => {
+     m.classList.remove('modal--open')
+      body[0].classList.remove('scroll--lock')
   })
 })
 
