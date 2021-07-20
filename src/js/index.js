@@ -87,12 +87,21 @@ let dropSection = document.querySelector('.service__content__dropdown')
 let textDropdown = dropSection.getElementsByTagName('span')
 let invisibleText = document.querySelector('.service__content__text--invisible')
 
+
+
 brandsDropdown.addEventListener('click', () => {
     for(let i = 0; i < invisiblesBrands.length; i++){
         invisiblesBrands[i].classList.toggle('invisible')
     }
     let img = brandsDropdown.getElementsByTagName('img')
     img[0].classList.toggle('img--rotate')
+    let content = brandsDropdown.querySelector('.dropdown__span')
+    if(content.textContent === 'Показать все'){
+      content.textContent = 'Скрыть'
+    } else {
+      content.textContent = 'Показать все'
+    }
+
 })
 
 typesDropdown.addEventListener('click', () => {
@@ -101,12 +110,26 @@ typesDropdown.addEventListener('click', () => {
     }
     let img = typesDropdown.getElementsByTagName('img')
     img[0].classList.toggle('img--rotate')
+
+    let content = typesDropdown.querySelector('.dropdown__span')
+    if(content.textContent === 'Показать все'){
+      content.textContent = 'Скрыть'
+    } else {
+      content.textContent = 'Показать все'
+    }
 })
 
 textDropdown[0].addEventListener('click', () => {
     invisibleText.classList.toggle('service__content__text--invisible')
     let img = dropSection.getElementsByTagName('img')
     img[0].classList.toggle('img--rotate')
+
+    if(textDropdown[0].textContent === 'Читать далее'){
+      textDropdown[0].textContent = 'Скрыть'
+    } else{
+      textDropdown[0].textContent = 'Читать далее'
+    }
+
 })
 
 

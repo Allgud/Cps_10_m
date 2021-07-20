@@ -26,7 +26,7 @@ const slider = () => {
 
 window.addEventListener('resize', () => {
   let screenWidth = window.screen.width
-  console.log(screenWidth);
+
   if(screenWidth < 768){
     slider()
   }else if(screenWidth >= 768){
