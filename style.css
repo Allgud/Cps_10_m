@@ -96,17 +96,21 @@
 .contacts__buttons div {
   margin-right: 1em; }
 
-.contacts__email {
+.contacts__email a {
+  text-decoration: none;
   font-family: "TTLakes";
   font-size: 16px;
   line-height: 24px;
-  font-weight: 500; }
+  font-weight: 500;
+  color: #1b1c21; }
 
-.contacts__phone {
+.contacts__phone a {
+  text-decoration: none;
   font-family: "TTLakes-Bold";
   font-size: 24px;
   line-height: 32px;
-  font-weight: 900; }
+  font-weight: 900;
+  color: #1b1c21; }
 
 .language__switch {
   display: flex;
@@ -368,7 +372,7 @@ h1::before {
     color: #1b1c21; }
   .service__content__image {
     height: 320px;
-    transform: translateY(-24px);
+    /*transform: translateY(-24px);*/
     border-radius: 15px;
     background-position: left; } }
 
@@ -914,18 +918,22 @@ h2 {
   height: 3rem;
   border: 1px solid #eaeaea;
   border-radius: 8px;
-  margin: 16px 0px; }
+  margin: 16px 0px;
+  padding-left: 16px;
+  font-family: "TTLakes";
+  font-size: 16px;
+  font-weight: 500; }
 
 .modal__container textarea {
   height: 7rem;
-  resize: vertical; }
+  resize: vertical;
+  padding-top: 12px; }
 
 .modal__container input::-moz-placeholder {
   font-family: "TTLakes-Medium";
   font-size: 16px;
   line-height: 24px;
   letter-spacing: -0.2px;
-  transform: translateX(16px);
   opacity: 0.5; }
 
 .modal__container input:-ms-input-placeholder {
@@ -933,7 +941,6 @@ h2 {
   font-size: 16px;
   line-height: 24px;
   letter-spacing: -0.2px;
-  transform: translateX(16px);
   opacity: 0.5; }
 
 .modal__container input::placeholder {
@@ -941,7 +948,6 @@ h2 {
   font-size: 16px;
   line-height: 24px;
   letter-spacing: -0.2px;
-  transform: translateX(16px);
   opacity: 0.5; }
 
 .modal__container textarea::-moz-placeholder {
@@ -949,7 +955,6 @@ h2 {
   font-size: 16px;
   line-height: 24px;
   letter-spacing: -0.2px;
-  transform: translate(16px, 12px);
   opacity: 0.5; }
 
 .modal__container textarea:-ms-input-placeholder {
@@ -957,7 +962,6 @@ h2 {
   font-size: 16px;
   line-height: 24px;
   letter-spacing: -0.2px;
-  transform: translate(16px, 12px);
   opacity: 0.5; }
 
 .modal__container textarea::placeholder {
@@ -965,7 +969,6 @@ h2 {
   font-size: 16px;
   line-height: 24px;
   letter-spacing: -0.2px;
-  transform: translate(16px, 12px);
   opacity: 0.5; }
 
 .modal__container form {
